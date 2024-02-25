@@ -13,8 +13,8 @@ export default {
         primary: ["Work Sans", "sans-serif"],
       },
       backgroundImage: {
-        mobilepattern: "url('./assets/images/background-pattern-mobile.svg')",
-        desktoppattern: "url('./assets/images/background-pattern-desktop.svg')",
+        mobilepattern: "url('./src/assets/background-pattern-mobile.svg')",
+        desktoppattern: "url('./src/assets/background-pattern-desktop.svg')",
       },
     },
   },
