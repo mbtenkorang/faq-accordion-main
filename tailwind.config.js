@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts}"],
+  content: ["./index.html", "./src/**/*.{js,vue,ts}"],
   theme: {
     extend: {
       colors: {
@@ -11,6 +11,10 @@ export default {
       },
       fontFamily: {
         primary: ["Work Sans", "sans-serif"],
+      },
+      backgroundImage: {
+        mobilepattern: "url('./assets/images/background-pattern-mobile.svg')",
+        desktoppattern: "url('./assets/images/background-pattern-desktop.svg')",
       },
     },
   },
