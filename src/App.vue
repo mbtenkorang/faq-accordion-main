@@ -1,20 +1,20 @@
 <template>
-  <article class="border border-light-pink shadow-light-pink shadow-xl max-w-sm rounded-lg p-8 bg-white">
-    <div class="flex items-center justify-startmb-5">
-      <div class="mr-6">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" fill="none" viewBox="0 0 40 41">
+  <article class="border border-light-pink shadow-light-pink shadow-lg w-10/12 mx-auto rounded-lg px-8 py-6 bg-white">
+    <div class="flex items-center justify-start">
+      <div class="mr-8">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 40 41">
           <path fill="#AD28EB"
             d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z" />
         </svg>
       </div>
-      <h1 class="text-dark-purple text-5xl font-bold">
+      <h1 class="text-dark-purple text-4xl font-bold">
         {{ articleTitle }}
       </h1>
     </div>
-    <div class="">
-      <section v-for="(faq,index) in faqData" class="py-5 border-b border-light-pink last:border-none last:pb-0">
+    <div>
+      <section v-for="(faq,index) in faqData" class="py-6 border-b border-light-pink last:border-none last:pb-0">
         <div @click="toggleAccordion(index)" class="flex items-center justify-between">
-          <h2 class="text-lg text-pretty font-bold text-dark-purple w-4/5">{{ faq.faqQuestion }}</h2>
+          <h2 class="text-base text-pretty font-semibold text-dark-purple w-10/12">{{ faq.faqQuestion }}</h2>
           <div>
             <button v-if="activeIndex === index"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="31"
                 fill="none" viewBox="0 0 30 31">
@@ -28,7 +28,7 @@
             </button>
           </div>
         </div>
-        <p v-if="activeIndex === index" class="text-gray-purple text-base text-pretty mt-5">{{ faq.faqResponse }}</p>
+        <p v-if="activeIndex === index" class="text-gray-purple text-sm text-pretty mt-5">{{ faq.faqResponse }}</p>
       </section>
     </div>
 
