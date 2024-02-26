@@ -73,8 +73,8 @@ channel where you can ask questions and seek support from other community member
 }
 </script>
 
-<style>
+<!-- <style>
 body {
-  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-image: url("/assets/images/background-pattern-mobile.svg");
 }
-</style>
+</style> -->

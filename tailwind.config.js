@@ -12,6 +12,9 @@ export default {
       fontFamily: {
         primary: ["Work Sans", "sans-serif"],
       },
+      backgroundImage: {
+        mobilepattern: "url('/assets/images/background-pattern-mobile.svg')",
+      },
     },
   },
   plugins: [],
