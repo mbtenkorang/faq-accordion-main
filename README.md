@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [faq-accordion-main](https://github.com/mbtenkorang/faq-accordion-main)
-- Live Site URL: [faq-accordion-site](https://your-live-site-url.com)
+- Live Site URL: [faq-accordion-site](https://faq-accordion-fem.onrender.com/)
 
 ## My process
 
