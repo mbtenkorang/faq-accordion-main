@@ -21,7 +21,7 @@
           </h2>
           <!-- SVG Icons -->
           <div>
-            <button v-if="activeIndex === index" type="button" name="show answer" aria-pressed="false"><svg
+            <button v-if="activeIndex === index" type="button" aria-pressed="false" name="show answer"><svg
                 xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
                 <path fill="#301534"
                   d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
@@ -35,7 +35,7 @@
           </div>
         </div>
         <!-- Answer to Question -->
-        <p v-if="activeIndex === index" class="text-gray-purple text-sm lg:text-base text-pretty mt-5">{{
+        <p v-if="activeIndex === index" class="text-gray-purple text-sm lg:text-base text-pretty mt-5" id="answer">{{
           faq.faqResponse
           }}
         </p>
