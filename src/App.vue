@@ -12,26 +12,28 @@
       </h1>
     </div>
     <div>
-      <section v-for="(faq,index) in faqData" class="py-6 border-b border-light-pink last:border-none last:pb-0">
+      <section v-for="(faq,index) in faqData" class="py-5 border-b border-light-pink last:border-none last:pb-0">
         <!-- Question and SVG Icon -->
         <div @click="toggleAccordion(index)" class="flex items-center justify-between">
           <h2
-            class="text-base md:text-lg text-pretty font-semibold text-dark-purple hover:text-hover-color hover:cursor-pointer focus:text-gray-purple w-10/12">
+            class="text-base md:text-lg text-pretty font-semibold text-dark-purple hover:text-hover-color hover:cursor-pointer focus:text-gray-purple w-10/12"
+            id="question">
             {{ faq.faqQuestion }}
           </h2>
           <!-- SVG Icons -->
           <div>
-            <button v-if="activeIndex === index" type="button" aria-pressed="false" name="show answer"><svg
-                xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
+            <a v-if="activeIndex === index" href="#question"><svg xmlns="http://www.w3.org/2000/svg" width="30"
+                height="31" fill="none" viewBox="0 0 30 31">
                 <path fill="#301534"
                   d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
-              </svg></button>
-            <button v-else type="button" name="hide answer">
+              </svg>
+            </a>
+            <a v-else href="#answer">
               <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
                 <path fill="#AD28EB"
                   d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z" />
               </svg>
-            </button>
+            </a>
           </div>
         </div>
         <!-- Answer to Question -->
