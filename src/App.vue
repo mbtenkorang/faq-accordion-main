@@ -7,16 +7,19 @@
             d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z" />
         </svg>
       </div>
-      <h1 class="text-dark-purple text-4xl lg:text-6xl font-bold">
+      <h1 class="text-dark-purple text-5xl lg:text-6xl font-bold">
         {{ articleTitle }}
       </h1>
     </div>
     <div>
       <section v-for="(faq,index) in faqData" class="py-6 border-b border-light-pink last:border-none last:pb-0">
+        <!-- Question and SVG Icon -->
         <div @click="toggleAccordion(index)" class="flex items-center justify-between">
           <h2
             class="text-base md:text-lg text-pretty font-semibold text-dark-purple hover:text-hover-color hover:cursor-pointer focus:text-gray-purple w-10/12">
-            {{ faq.faqQuestion }}</h2>
+            {{ faq.faqQuestion }}
+          </h2>
+          <!-- SVG Icons -->
           <div>
             <button v-if="activeIndex === index" type="button" name="show answer" aria-pressed="false"><svg
                 xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
@@ -31,9 +34,11 @@
             </button>
           </div>
         </div>
+        <!-- Answer to Question -->
         <p v-if="activeIndex === index" class="text-gray-purple text-sm lg:text-base text-pretty mt-5">{{
           faq.faqResponse
-          }}</p>
+          }}
+        </p>
       </section>
     </div>
 
@@ -77,9 +82,3 @@ channel where you can ask questions and seek support from other community member
   }
 }
 </script>
-
-<!-- <style>
-body {
-  background-image: url("/assets/images/background-pattern-mobile.svg");
-}
-</style> -->
