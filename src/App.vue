@@ -14,32 +14,26 @@
     <div>
       <section v-for="(faq,index) in faqData" class="py-5 border-b border-light-pink last:border-none last:pb-0">
         <!-- Question and SVG Icon -->
-        <div @click="toggleAccordion(index)" class="flex items-center justify-between">
+        <div @click="toggleAccordion(index)" class="flex items-center justify-between" tabindex="1">
           <h2
             class="text-base md:text-lg text-pretty font-semibold text-dark-purple hover:text-hover-color hover:cursor-pointer focus:text-gray-purple w-10/12"
-            id="question">
+            id="hide-answer">
             {{ faq.faqQuestion }}
           </h2>
           <!-- SVG Icons -->
           <div>
-            <a v-if="activeIndex === index" href="#question"><svg xmlns="http://www.w3.org/2000/svg" width="30"
-                height="31" fill="none" viewBox="0 0 30 31">
-                <path fill="#301534"
-                  d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.2 12.2 0 0 0 15 3.312Zm4.688 13.124h-9.375a.938.938 0 0 1 0-1.875h9.374a.938.938 0 0 1 0 1.876Z" />
-              </svg>
+            <a v-if="activeIndex === index" href="#hide-answer" aria-label="Show the answer to the question">
+              <img src="/assets/images/icon-minus.svg" alt="Minus Sign">
             </a>
-            <a v-else href="#answer">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" fill="none" viewBox="0 0 30 31">
-                <path fill="#AD28EB"
-                  d="M15 3.313A12.187 12.187 0 1 0 27.188 15.5 12.203 12.203 0 0 0 15 3.312Zm4.688 13.124h-3.75v3.75a.938.938 0 0 1-1.876 0v-3.75h-3.75a.938.938 0 0 1 0-1.875h3.75v-3.75a.938.938 0 0 1 1.876 0v3.75h3.75a.938.938 0 0 1 0 1.876Z" />
-              </svg>
+            <a v-else href="#show-answer" aria-label="Hide the answer to the question">
+              <img src="/assets/images/icon-plus.svg" alt="Plus Sign">
             </a>
           </div>
         </div>
         <!-- Answer to Question -->
-        <p v-if="activeIndex === index" class="text-gray-purple text-sm lg:text-base text-pretty mt-5" id="answer">{{
-          faq.faqResponse
-          }}
+        <p v-if="activeIndex === index" class="text-gray-purple text-sm lg:text-base text-pretty mt-5" id="show-answer"
+          tabindex="2">
+          {{ faq.faqResponse }}
         </p>
       </section>
     </div>
