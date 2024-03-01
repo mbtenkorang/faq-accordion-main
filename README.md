@@ -42,7 +42,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - Mobile-first workflow
-- [Vue](https://vuejs.org/) - JS Progressive frameword
+- [VueJS](https://vuejs.org/) - JS Progressive framework
 - [Tailwindcss](https://tailwindcss.com/) - For styling
 - [Vite](https://vitejs.dev/) - For bundling
 - [PNPM](https://pnpm.io/) - For package management
