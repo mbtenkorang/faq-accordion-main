@@ -15,7 +15,7 @@
     <div>
       <section v-for="(faq,index) in faqData" class="py-5 border-b border-light-pink last:border-none last:pb-0">
         <!-- Question and SVG Icon -->
-        <div @click="toggleAccordion(index)" class="flex items-center justify-between" tabindex="0.5" role="article">
+        <div @click="toggleAccordion(index)" class="flex items-center justify-between" tabindex="0.5">
           <h2
             class="text-base md:text-lg text-pretty font-semibold text-dark-purple hover:text-hover-color hover:cursor-pointer focus:text-gray-purple w-10/12"
             id="hide-answer">
