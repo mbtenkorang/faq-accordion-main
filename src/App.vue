@@ -1,7 +1,7 @@
 <template>
   <article class="border border-light-pink shadow-light-pink shadow-lg rounded-xl px-8 lg:px-8 py-6 lg:py-8 bg-white ">
     <div class="flex items-center justify-start">
-      <div class="mr-8" aria-label="logo">
+      <div class="mr-8" aria-labelledby="logo">
         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="41" fill="none" viewBox="0 0 40 41">
           <path fill="#AD28EB"
             d="M37.5 20.5a2.467 2.467 0 0 1-1.64 2.344l-9.913 3.604-3.603 9.911a2.5 2.5 0 0 1-4.688 0l-3.604-9.922-9.911-3.593a2.5 2.5 0 0 1 0-4.688l9.921-3.604 3.594-9.911a2.5 2.5 0 0 1 4.688 0l3.604 9.921 9.911 3.594A2.467 2.467 0 0 1 37.5 20.5Z" />
